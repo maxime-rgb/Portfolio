@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+}
+
+.planet {
+  width: 2%;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+
+/* --------------------- Bottom nav ------------------*/
+.contact {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  font-family: "space", sans-serif;
+  font-size: 1.5em;  
+  z-index: 2;
+
+    a{
+      text-decoration: none;
+      color: #FFF;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+}

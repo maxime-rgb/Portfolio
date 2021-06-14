@@ -1,0 +1,272 @@
+@font-face {
+  font-family: "nasa";
+  src: url("/POLICE/nasa.TTF") format("woff2"),
+         url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+ }
+ @font-face {
+  font-family: "space";
+  src: url("/POLICE/space\ age.ttf") format("woff2"),
+         url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+ }
+ @font-face {
+  font-family: "alexana";
+  src: url("/POLICE/Alexana.ttf") format("woff2"),
+         url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+ }
+
+  .big-wrapper {
+    color: #eee;
+    font-family: "space", sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://i.postimg.cc/sXGXZtdd/seamless-2030395-1920.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  .main-header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+  
+  .main-header h2 {
+    line-height: 1;
+    font-size: 3rem;
+    position: relative;
+    z-index: 3;
+    padding-bottom: 0.5rem;
+  }
+  
+  .main-header h2 span {
+    font-size: 0.75em;
+    font-family: "space", sans-serif;
+  }
+  
+  /* Nav bar */
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .main-nav a {
+    position: relative;
+    color: #eee;
+    height: 64px;
+    width: 64px;
+    margin: 0 1.5rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+  
+  .main-nav li a:hover::after,
+  .main-nav li a:focus::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 133%;
+    z-index: 4;
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .main-nav li:nth-child(1) a:hover::after {
+    content: "Mercury";
+  }
+  .main-nav li:nth-child(2) a:hover::after {
+    content: "Venus";
+  }
+  .main-nav li:nth-child(3) a:hover::after {
+    content: "Earth";
+  }
+  .main-nav li:nth-child(4) a:hover::after {
+    content: "Mars";
+  }
+  .main-nav li:nth-child(5) a:hover::after {
+    content: "Jupiter";
+  }
+  .main-nav li:nth-child(6) a:hover::after {
+    content: "Saturn";
+  }
+  .main-nav li:nth-child(7) a:hover::after {
+    content: "Uranus";
+  }
+  .main-nav li:nth-child(8) a:hover::after {
+    content: "Neptune";
+  }
+  
+  .main-nav a img {
+    display: block;
+    width: 65%;
+    opacity: 0.5;
+    transition: 200ms ease;
+    color: #eee;
+  
+  }
+  
+  .main-nav li:nth-child(3) a img {
+    width: 62%;
+  }
+  .main-nav li:nth-child(4) a img {
+    width: 140%;
+  }
+  .main-nav a:hover img,
+  .main-nav a img.active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1.5);
+    background-image: radial-gradient(black, transparent 80%);
+  }
+  
+  .main-nav a img.active {
+    transform: scale(2);
+    z-index: 2;
+
+  }
+  
+  .main-nav li:nth-child(3) a:hover img {
+    background-image: radial-gradient(black, transparent 95%);
+    overflow: visible;
+  }
+  
+  /* content */
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+    margin-top: 10rem;
+    font-size: 1.2em;
+  }
+  
+  .planet-col {
+    width: 38%;
+  }
+  
+  .planet-col img {
+    width: 100%;
+    display: block;
+
+  }
+  
+  .info-col {
+    margin-right: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-family: "space", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  
+  .planet-col,
+  .info-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 1000ms ease-in-out;
+      transform: translateX(0%) scale(1);
+      opacity: 1;
+  }
+  
+  .hide-left {
+      opacity: 0;
+      transform: translateX(-200%) scale(3);
+  }
+  
+  .hide-right {
+      opacity: 0;
+      transform: translateX(100%) scale(0.25);
+  }
+  
+  td:first-of-type {
+    text-align: right;
+  }
+  
+  td:nth-child(2) {
+    padding-left: 1rem;
+    max-width: 25rem;
+  }
+  
+  /*mobile style */
+  @media screen and (max-width: 639px) {
+    .main-header h2 {
+      font-size: 1.23rem;
+    }
+  
+    .main-nav {
+      margin-top: 2rem;
+    }
+  
+    .main-nav li {
+      width: 25%;
+      text-align: center;
+      margin: 0 0 2rem;
+    }
+  
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 40px;
+
+    }
+  
+    h1 {
+      font-size: 4rem;
+    }
+  
+    .info-col {
+      margin-right: 0;
+    }
+  
+    .planet-col {
+      width: 90.5%;
+    }
+    .contact{
+      position: relative;
+      top: -45px;
+      background-color: transparent;
+    }
+  }
+  
+  /* Larger Desktop styles */
+  @media screen and (min-width: 1440px) {
+    h1 {
+      font-size: 5rem;
+    }
+  
+    .info-col table {
+      font-size: 2rem;
+    }
+  
+    .main-header h2 {
+      padding-bottom: 2.5rem;
+      font-size: 3rem;
+    }
+  
+    .main-nav li a {
+      margin: 0 1rem;
+    }
+  
+    .main-nav a svg.active {
+      transform: scale(3);
+    }
+  }
+ 
